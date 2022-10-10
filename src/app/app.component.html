@@ -1,1 +1,22 @@
-<tab></tab>
+<div class="container-fluid">
+  <div class="row" style="border: solid 1px black; border-radius: 10px; max-width: 400px; padding: 0px">
+    <div class="col-sm">{{ filterargs[0] }}</div>
+    <div class="col-sm">{{ filterargs[1] }}</div>
+    <div class="col-sm">{{ filterargs[2] }}</div>
+    <div class="col-sm">{{ filterargs[3] }}</div>
+  </div>
+  <div class="d-flex">
+    <div class="my-4">
+      <app-row *ngFor="let user of data.users | filter: filterargs[0]" [user]="user"></app-row>
+    </div>
+    <div class="my-4">
+      <app-row *ngFor="let user of data.users | filter: filterargs[1]" [user]="user"></app-row>
+    </div>
+    <div class="my-4">
+      <app-row *ngFor="let user of data.users | filter: filterargs[2]" [user]="user"></app-row>
+    </div>
+    <div class="my-4">
+      <app-row *ngFor="let user of data.users | filter: filterargs[3]" [user]="user"></app-row>
+    </div>
+  </div>
+</div>

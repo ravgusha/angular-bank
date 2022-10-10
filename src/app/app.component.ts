@@ -6,5 +6,7 @@ import data from './data/db.json';
 })
 export class AppComponent {
   title = 'bank';
-  users = data;
+  data = data;
+
+  filterargs = ['income', 'outcome', 'loan', 'investment'];
 }
