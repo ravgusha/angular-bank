@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', redirectTo: '/navigator', pathMatch: 'full'},
   {
     path: 'navigator',
     component: TableComponent,
