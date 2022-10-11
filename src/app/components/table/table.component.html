@@ -1,0 +1,15 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Account</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of data.users | filter: filterargs[tab]">
+    <tr>
+      <td>{{ user.name.first }} {{ user.name.last }}</td>
+      <td>{{ user.amount }}</td>
+    </tr>
+  </tbody>
+</table>
+
