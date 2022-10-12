@@ -1,6 +1,6 @@
-<div class="container"  style="max-width: 400px">
+<div class="container" style="max-width: 400px">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" *ngFor="let filter of filterargs; index as i">
       <a
         class="nav-link"
         id="navigator-tab"
@@ -9,49 +9,8 @@
         role="tab"
         aria-selected="false"
         [routerLink]="['navigator']"
-        [queryParams]="{ tab: 0 }"
-        >{{ filterargs[0] }}</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        id="navigator-tab"
-        data-toggle="tab"
-        routerLinkActive="active"
-        [routerLink]="['navigator']"
-        [queryParams]="{ tab: 1 }"
-        role="tab"
-        aria-controls="contact"
-        aria-selected="false"
-        >{{ filterargs[1] }}</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        id="navigator-tab"
-        data-toggle="tab"
-        routerLinkActive="active"
-        [routerLink]="['navigator']"
-        [queryParams]="{ tab: 2 }"
-        role="tab"
-        aria-controls="contact"
-        aria-selected="false"
-        >{{ filterargs[2] }}</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        id="navigator-tab"
-        data-toggle="tab"
-        routerLinkActive="active"
-        [routerLink]="['navigator']"
-        [queryParams]="{ tab: 3 }"
-        role="tab"
-        aria-selected="false"
-        >{{ filterargs[3] }}</a
+        [queryParams]="{ tab: [i] }"
+        >{{ filterargs[i] }}</a
       >
     </li>
   </ul>
